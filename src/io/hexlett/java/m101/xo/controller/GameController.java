@@ -1,5 +1,6 @@
 package io.hexlett.java.m101.xo.controller;
 
+import io.hexlett.java.m101.xo.model.Figure;
 import io.hexlett.java.m101.xo.model.Player;
 
 public class GameController {
@@ -7,9 +8,11 @@ public class GameController {
     private static final int MIN_COORDINATE = 0;
     private static final int MAX_COORDINATE = 3;
 
+
     private final String gameName;
 
-    private Player[] players;
+//    private Player[] players = new Player[] {new Player("Max", new Figure("0")),
+//            new Player("Leo", new Figure("X"))};
 
     public GameController(final String gameName) {
         this.gameName = gameName;
@@ -36,9 +39,9 @@ public class GameController {
 
     }
 
-    public Player[] getPlayers() {
-        return players;
-    }
+//    public Player[] getPlayers() {
+//        return players;
+//    }
 
 private static boolean checkCoordinate (final  int coordinate){
     if (coordinate < MIN_COORDINATE || coordinate > MAX_COORDINATE) return false;

@@ -12,6 +12,6 @@ public class ConsoleView {
     public void showGameName(){
         System.out.println(game.getGameName());}
 
-    public void showPlayerName(){
-        System.out.println(game.getPlayers());}
+//    public void showPlayerName(){
+//        System.out.println(game.getPlayers());}
 }
