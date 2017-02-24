@@ -1,10 +1,11 @@
 package io.hexlett.java.m101.xo.view;
 
-import io.hexlett.java.m101.xo.controller.Game;
+
+import io.hexlett.java.m101.xo.controller.GameController;
 
 public class AdvConsoleView extends ConsoleView {
 
-    public AdvConsoleView(final Game game) {
+    public AdvConsoleView(final GameController game) {
         super(game);
     }
 
