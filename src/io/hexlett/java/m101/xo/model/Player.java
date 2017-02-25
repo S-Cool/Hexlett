@@ -2,9 +2,9 @@ package io.hexlett.java.m101.xo.model;
 
 public class Player {
     private final String name;
-    private final String figure;
+    private final Figure figure;
 
-    public Player(final String name, String figure) {
+    public Player(final String name, Figure figure) {
         this.name = name;
         this.figure = figure;
     }
@@ -14,7 +14,7 @@ public class Player {
         return name;
     }
 
-    public String getFigure() {
-        return figure;
-    }
+//    public String getFigure() {
+//        return figure;
+//    }
 }
