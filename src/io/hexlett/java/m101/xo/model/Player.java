@@ -5,16 +5,19 @@ public class Player {
     private final Figure figure;
 
     public Player(final String name, Figure figure) {
+
+        assert name != null;
+        assert figure != null;
+
         this.name = name;
         this.figure = figure;
     }
 
     public String getName() {
-
         return name;
     }
 
-//    public String getFigure() {
-//        return figure;
-//    }
+    public Figure getFigure() {
+        return figure;
+    }
 }

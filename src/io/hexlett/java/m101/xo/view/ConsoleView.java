@@ -46,16 +46,16 @@ public class ConsoleView {
         }
     }
 
-    public void showBoardLine(final int row) {
-
-        for (int i = 0; i < 3; i++) {
-            System.out.print(gameController.getBoard().getFigure(row, i));
+    protected void showLine(final int size) {
+        for (int i = 1; i < size; i++) {
+            System.out.print(LINE_CHARACTER);
         }
     }
 
-    private void showLine(final int size) {
-        for (int i = 1; i < size; i++) {
-            System.out.print(LINE_CHARACTER);
+    private void showBoardLine(final int row) {
+
+        for (int i = 0; i < 3; i++) {
+            System.out.print(gameController.getBoard().getFigure(row, i));
         }
     }
 

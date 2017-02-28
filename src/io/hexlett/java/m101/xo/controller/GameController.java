@@ -4,6 +4,8 @@ import io.hexlett.java.m101.xo.model.Board;
 import io.hexlett.java.m101.xo.model.Figure;
 import io.hexlett.java.m101.xo.model.Player;
 
+import java.util.stream.IntStream;
+
 public class GameController {
 
     private static final int MIN_COORDINATE = 0;
@@ -30,9 +32,30 @@ public class GameController {
         return gameName;
     }
 
-    public Player currentPlayer() {
-        return null;
-    }
+//    public Player currentPlayer() {
+//        //BEGIN
+//        final<String, Integer>countCalculator = (figure) =>IntStream.range(0, 3).map(row = >
+//                (int) IntStream.range(0, 3).filter(column ->
+//                                board.getFigure(row, column) != null &&
+//                                        board.getFigure(row, column).getFigure().equals(figure)
+//                ).count()
+//        ).sum();
+//        final int countX = countCalculator.apply("X");
+//        final int count0 = countCalculator.apply("0");
+//        final boolean xMove = countX == count0;
+//        if (players[0].getFigure().getFigure().equals("X")) {
+//            if (xMove)
+//                return players[0];
+//            else
+//                return players[1];
+//        } else {
+//            if (xMove)
+//                return players[1];
+//            else
+//                return players[0];
+//        }
+////END
+//    }
 
     public Board getBoard() {
         return board;
