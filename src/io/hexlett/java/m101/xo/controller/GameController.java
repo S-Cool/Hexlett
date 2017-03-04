@@ -28,13 +28,9 @@ public class GameController {
         }
     }
 
-    public String getGameName() {
-        return gameName;
-    }
-
 //    public Player currentPlayer() {
 //        //BEGIN
-//        final<String, Integer>countCalculator = (figure) =>IntStream.range(0, 3).map(row = >
+//        final<String, Integer>countCalculator=(figure) =>IntStream.range(0, 3).map(row = >
 //                (int) IntStream.range(0, 3).filter(column ->
 //                                board.getFigure(row, column) != null &&
 //                                        board.getFigure(row, column).getFigure().equals(figure)
@@ -54,11 +50,50 @@ public class GameController {
 //            else
 //                return players[0];
 //        }
-////END
+//        //END
 //    }
+
+//    public Player winner() {
+//        //BEGIN
+//        for (int i = 0; i < 3; i++) {
+//            if (board.getFigure(i, 0) == board.getFigure(1, i) &&
+//                    board.getFigure(i, 0) == board.getFigure(1, 2)) {
+//                if (players[0].getFigure() == board.getFigure(i, 0)) return players[0];
+//                return players[1];
+//            }
+//        }
+//        for (int i = 0; i < 3; i++) {
+//            if (board.getFigure(0, 1) == board.getFigure(1, i) &&
+//                    board.getFigure(0, i) == board.getFigure(2, 1)) {
+//                if (players[0].getFigure() == board.getFigure(0, i)) return players[0];
+//                return players[1];
+//            }
+//        }
+//
+//            if (board.getFigure(0, 0) == board.getFigure(1, 1) &&
+//                    board.getFigure(0, 0) == board.getFigure(2, 2)) {
+//                if (players[0].getFigure() == board.getFigure(1, 1)) return players[0];
+//                return players[1];
+//
+//        }
+//            if (board.getFigure(0, 2) == board.getFigure(1, 1) &&
+//                    board.getFigure(0, 2) == board.getFigure(2, 0)) {
+//                if (players[0].getFigure() == board.getFigure(1, 1)) return players[0];
+//                return players[1];
+//
+//        }
+//        return null;
+//        //END
+//    }
+
 
     public Board getBoard() {
         return board;
+    }
+
+
+    public String getGameName() {
+        return gameName;
     }
 
     public boolean move(final int x, final int y) {

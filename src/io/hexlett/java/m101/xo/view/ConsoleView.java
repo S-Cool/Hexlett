@@ -33,12 +33,12 @@ public class ConsoleView {
         System.out.println(gameController.getPlayers());
     }
 
-    public void showBoard() {
-        for (int i = 1; i < 3; i++) {
-            showBoardLine(i);
-            showLine(LINE_SIZE);
-        }
-    }
+//    public void showBoard() {
+//        for (int i = 1; i < 3; i++) {
+//            showBoardLine(i);
+//            showLine(LINE_SIZE);
+//        }
+//    }
 
     public void showPlayers() {
         for (Player player : gameController.getPlayers()){
@@ -52,12 +52,12 @@ public class ConsoleView {
         }
     }
 
-    private void showBoardLine(final int row) {
-
-        for (int i = 0; i < 3; i++) {
-            System.out.print(gameController.getBoard().getFigure(row, i));
-        }
-    }
+//    private void showBoardLine(final int row) {
+//
+//        for (int i = 0; i < 3; i++) {
+//            System.out.print(gameController.getBoard().getFigure(row, i));
+//        }
+//    }
 
     private int getCoordinate(final String coordinateName) {
         int counter = 0;
