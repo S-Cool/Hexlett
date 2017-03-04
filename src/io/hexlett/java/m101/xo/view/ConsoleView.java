@@ -11,7 +11,6 @@ public class ConsoleView {
     private static final int LINE_SIZE = 11;
     public static final String LINE_CHARACTER = "~";
     protected final GameController gameController;
-
     private final static Scanner IN = new Scanner(System.in);
 
     public ConsoleView(GameController gameController) {
