@@ -28,7 +28,7 @@ public class Main {
     }
 //
 //public static void testConsoleView(){
-//    final GameController gameController = new GameController("XO", null, null);
+//    final GameController gameController  = new GameController("XO", null, null);
 //    final AdvConsoleView advConsoleView = new AdvConsoleView(gameController);
 //    final ConsoleView consoleView = new ConsoleView(gameController);
 //    startGame(advConsoleView);
