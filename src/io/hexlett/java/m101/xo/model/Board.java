@@ -1,5 +1,7 @@
 package io.hexlett.java.m101.xo.model;
 
+import io.hexlett.java.m101.xo.helpers.CoordinateHelper;
+
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
@@ -9,10 +11,10 @@ public class Board {
 
     private Figure[][] figures = new Figure[SIZE_FIELD][SIZE_FIELD];
 
-//    public Figure getFigure(final int x, final int y) {
-//        if (!CoordinateHelper.checkCoordinate(x) || !CoordinateHelper.checkCoordinate(y)) return null;
-//        return figures[x][y];
-//    }
+    public Figure getFigure(final int x, final int y) {
+        if (!CoordinateHelper.checkCoordinate(x) || !CoordinateHelper.checkCoordinate(y)) return null;
+        return figures[x][y];
+    }
 
 //    public boolean setFigure (final int x, final int y, final Figure figure){
 //        if (!CoordinateHelper.checkCoordinate(x) || !CoordinateHelper.checkCoordinate(y))
@@ -26,5 +28,9 @@ public class Board {
 
     public void showBoard() {
         System.out.println(Arrays.deepToString(this.figures));
+    }
+
+    public void setFigure(int x, int y, Figure figure) {
+
     }
 }

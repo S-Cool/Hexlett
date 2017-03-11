@@ -1,5 +1,6 @@
 package io.hexlett.java.m101.xo.controller;
 
+import io.hexlett.java.m101.xo.helpers.CoordinateHelper;
 import io.hexlett.java.m101.xo.model.Board;
 import io.hexlett.java.m101.xo.model.Figure;
 import io.hexlett.java.m101.xo.model.Player;
@@ -96,18 +97,21 @@ public class GameController {
         return gameName;
     }
 
-    public boolean move(final int x, final int y) {
+    public boolean move(final int x, final int y, final Board board, final Figure figure) {
 
         assert x >= 0;
         assert y >= 0;
 
-        if (!checkCoordinate(x) == false || !checkCoordinate(y) == false) {
+        if (!CoordinateHelper.checkCoordinate(x) || !CoordinateHelper.checkCoordinate(y)) {
             return false;
         }
-
+        if (board.getFigure(x, y) != null) {
+            return false;
+        }
+        board.setFigure(x, y, figure);
         return true;
-
     }
+
 
     public Player[] getPlayers() {
         return players;
