@@ -1,11 +1,9 @@
 package io.hexlett.java.m101.xo.controller;
 
 import io.hexlett.java.m101.xo.helpers.CoordinateHelper;
-import io.hexlett.java.m101.xo.model.Board;
+import io.hexlett.java.m101.xo.model.Field;
 import io.hexlett.java.m101.xo.model.Figure;
 import io.hexlett.java.m101.xo.model.Player;
-
-import java.util.stream.IntStream;
 
 public class GameController {
 
@@ -15,11 +13,11 @@ public class GameController {
 
     private final String gameName;
 
-    private final Board board;
+    private final Field board;
 
     private final Player[] players;
 
-    public GameController(final String gameName, final Player[] players, final Board board) {
+    public GameController(final String gameName, final Player[] players, final Field board) {
         this.board = board;
         this.players = players;
         if (gameName == null || gameName.isEmpty()) {
@@ -88,7 +86,7 @@ public class GameController {
 //    }
 
 
-    public Board getBoard() {
+    public Field getBoard() {
         return board;
     }
 
@@ -97,18 +95,7 @@ public class GameController {
         return gameName;
     }
 
-    public boolean move(final int x, final int y, final Board board, final Figure figure) {
-
-        assert x >= 0;
-        assert y >= 0;
-
-        if (!CoordinateHelper.checkCoordinate(x) || !CoordinateHelper.checkCoordinate(y)) {
-            return false;
-        }
-        if (board.getFigure(x, y) != null) {
-            return false;
-        }
-        board.setFigure(x, y, figure);
+    public boolean move(final int x, final int y, final Field board, final Figure figure) {
         return true;
     }
 
