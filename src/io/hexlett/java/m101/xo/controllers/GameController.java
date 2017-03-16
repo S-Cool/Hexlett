@@ -1,6 +1,5 @@
-package io.hexlett.java.m101.xo.controller;
+package io.hexlett.java.m101.xo.controllers;
 
-import io.hexlett.java.m101.xo.helpers.CoordinateHelper;
 import io.hexlett.java.m101.xo.model.Field;
 import io.hexlett.java.m101.xo.model.Figure;
 import io.hexlett.java.m101.xo.model.Player;

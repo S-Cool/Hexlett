@@ -1,7 +1,7 @@
 package io.hexlett.java.m101.xo.view;
 
 
-import io.hexlett.java.m101.xo.controller.GameController;
+import io.hexlett.java.m101.xo.controllers.GameController;
 
 public class AdvConsoleView extends ConsoleView {
 
