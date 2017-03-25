@@ -1,7 +1,6 @@
 package io.hexlett.java.m101.xo.model;
 
-import io.hexlett.java.m101.xo.exceptions.AlreadyOccupiedException;
-import io.hexlett.java.m101.xo.exceptions.InvalidePointException;
+import io.hexlett.java.m101.xo.exceptions.InvalidPointException;
 import org.junit.Test;
 
 import java.awt.*;
@@ -48,7 +47,7 @@ public class FieldTest {
         try {
             field.getFigure(inputPoint);
             fail();
-        } catch (final InvalidePointException e) {
+        } catch (final InvalidPointException e) {
 
         }
     }
@@ -61,7 +60,7 @@ public class FieldTest {
         try {
             field.getFigure(inputPoint);
             fail();
-        } catch (final InvalidePointException e) {
+        } catch (final InvalidPointException e) {
 
         }
     }
@@ -74,7 +73,7 @@ public class FieldTest {
         try {
             field.getFigure(inputPoint);
             fail();
-        } catch (final InvalidePointException e) {
+        } catch (final InvalidPointException e) {
 
         }
     }
@@ -87,7 +86,7 @@ public class FieldTest {
         try {
             field.getFigure(inputPoint);
             fail();
-        } catch (final InvalidePointException e) {
+        } catch (final InvalidPointException e) {
 
         }
     }

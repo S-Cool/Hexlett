@@ -1,6 +1,6 @@
 package io.hexlett.java.m101.xo.model;
 
-import io.hexlett.java.m101.xo.exceptions.InvalidePointException;
+import io.hexlett.java.m101.xo.exceptions.InvalidPointException;
 
 import java.awt.*;
 
@@ -20,16 +20,16 @@ public class Field {
         return fieldSize;
     }
 
-    public Figure getFigure(final Point point)throws InvalidePointException{
+    public Figure getFigure(final Point point)throws InvalidPointException {
         if (!checkPoint(point)){
-            throw new InvalidePointException();
+            throw new InvalidPointException();
         }
         return field[point.x][point.y];
     }
 
-    public void setFigure(final Point point, final Figure figure) throws InvalidePointException{
+    public void setFigure(final Point point, final Figure figure) throws InvalidPointException {
         if (!checkPoint(point)){
-            throw new InvalidePointException();
+            throw new InvalidPointException();
         }
         field[point.x][point.y] = figure;
     }
