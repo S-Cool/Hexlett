@@ -19,7 +19,7 @@ public class CurrentMoveControllerTest {
             field.setFigure(new Point(i, 0), Figure.X);
             field.setFigure(new Point(i, 1), Figure.O);
             field.setFigure(new Point(i, 2), Figure.X);
-            assertEquals(Figure.X, currentMoveController.currentMove(field));
+            assertEquals(Figure.O, currentMoveController.currentMove(field));
         }
     }
 

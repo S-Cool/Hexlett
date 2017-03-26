@@ -7,6 +7,7 @@ import io.hexlett.java.m101.xo.model.Figure;
 import java.awt.*;
 
 public class WinnerController {
+
     public Figure getWinner(final Field field) {
         try {
             for (int i = 0; i < 3; i++)
@@ -22,7 +23,6 @@ public class WinnerController {
 
             if (check(field, new Point(0, 2), p -> new Point(p.x + 1, p.y - 1)))
                 return field.getFigure(new Point(1, 1));
-
 
         } catch (final InvalidPointException e) {
             e.printStackTrace();
@@ -42,7 +42,7 @@ public class WinnerController {
             if (currentFigure == null)
                 return false;
 
-            nextFigure = field.getFigure(currentPoint);
+            nextFigure = field.getFigure(nextPoint);
         } catch (final InvalidPointException e) {
             return true;
         }
@@ -51,10 +51,12 @@ public class WinnerController {
             return false;
 
         return check(field, nextPoint, pointGenerator);
-
     }
 
     private interface IPointGenerator {
-        public Point next(final Point point);
+
+        Point next(final Point point);
+
     }
+
 }

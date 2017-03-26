@@ -11,14 +11,19 @@ public class CurrentMoveController {
     public Figure currentMove(final Field field) {
         int countFigure = 0;
         for (int x = 0; x < field.getSize(); x++) {
-           countFigure += countFigureInTheRow(field, x);
+            countFigure += countFiguresInTheRow(field, x);
         }
+
+        if (countFigure == field.getSize() * field.getSize())
+            return null;
+
         if (countFigure % 2 == 0)
             return Figure.X;
 
         return Figure.O;
     }
-    private int countFigureInTheRow (final Field field, final int row){
+
+    private int countFiguresInTheRow(final Field field, final int row) {
         int countFigure = 0;
         for (int x = 0; x < field.getSize(); x++) {
             try {
@@ -30,4 +35,5 @@ public class CurrentMoveController {
         }
         return countFigure;
     }
+
 }
