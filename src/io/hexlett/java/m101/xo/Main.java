@@ -13,7 +13,7 @@ public class Main {
 
         final Player[] players = new Player[2];
         players[0] = new Player(name1, Figure.X);
-        players[0] = new Player(name2, Figure.O);
+        players[1] = new Player(name2, Figure.O);
 
         final Game gameXO = new Game(players, new Field(3), "XO");
 
