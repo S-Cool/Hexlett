@@ -8,6 +8,7 @@ import io.hexlett.java.m101.xo.exceptions.InvalidPointException;
 import io.hexlett.java.m101.xo.model.Field;
 import io.hexlett.java.m101.xo.model.Figure;
 import io.hexlett.java.m101.xo.model.Game;
+import io.hexlett.java.m101.xo.model.Player;
 
 import java.awt.*;
 import java.util.InputMismatchException;
@@ -22,7 +23,13 @@ public class ConsoleView {
     private final MoveController moveController = new MoveController();
 
     public void show(final Game game) {
-        System.out.format("Game name: %s\n", game.getName());
+        System.out.format("Game name %s\n", game.getName());
+
+        System.out.println("Players:");
+        for (Player player : game) {
+            System.out.format("Gamer name %s figure %s\n", player.getName(), player.getFigure());
+        }
+
         final Field field = game.getField();
         for (int x = 0; x < field.getSize(); x++) {
             if (x != 0)
