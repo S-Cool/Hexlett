@@ -8,7 +8,7 @@ public class MapExample4Merge {
     public static void main(String[] args) {
         final Map<String, Student> students = new HashMap<String, Student>() {{
             put("12", new Student("12", "Slava"));
-            put("11", new Student("13", "Gleb"));
+            put("11", new Student("11", "Gleb"));
         }};
         final Map<String, Student> students2 = new HashMap<String, Student>() {{
             put("12", new Student("13", "Slava"));
