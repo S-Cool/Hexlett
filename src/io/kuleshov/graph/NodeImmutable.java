@@ -1,6 +1,6 @@
 package io.kuleshov.graph;
 
-public class NodeImmutable implements Inode {
+public class NodeImmutable implements Inode<Integer> {
 
     private final int value;
 
@@ -26,11 +26,13 @@ public class NodeImmutable implements Inode {
             return new NodeImmutable(this.value, left, new NodeImmutable(value, null, null));
         return new NodeImmutable(this.value, left, right.add(value));
     }
+
+
     @Override
-    public void print() {
-        if (left != null) left.print();
-        System.out.println(value);
-        if (right != null) right.print();
+    public void forEach(Iconsumer<Integer> consume) {
+        if (left != null) left.forEach(consume);
+        consume.consume(value);
+        if (right != null) right.forEach(consume);
     }
 
     @Override
