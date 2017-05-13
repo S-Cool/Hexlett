@@ -8,13 +8,13 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
         try {
-            new Module();
+            new Module("module-config.xml");
         } catch (IOException ex) {
             // handle exception
         } catch (ParserConfigurationException ex) {
             // handle exception
-        } catch (org.xml.sax.SAXException ex) {
-            ex.printStackTrace();
+        } catch (org.xml.sax.SAXException e) {
+            // handle exception
         }
     }
 }

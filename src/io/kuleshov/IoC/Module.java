@@ -9,9 +9,15 @@ import org.xml.sax.SAXException;
 
 public class Module {
 
+    public static final String DEFAULT_CONFIG = "config.xml";
+
     public Module() throws IOException, ParserConfigurationException, SAXException {
+        this(DEFAULT_CONFIG);
+    }
+
+    public Module(String name) throws IOException, ParserConfigurationException, SAXException {
         Document document = DocumentBuilderFactory.newInstance().
-                newDocumentBuilder().parse(new FileInputStream("config.xml"));
+                newDocumentBuilder().parse(new FileInputStream(name));
         Configuration configuration = new Configuration();
         // working with document to get configuration
         init(configuration);
