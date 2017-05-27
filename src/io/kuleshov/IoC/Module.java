@@ -1,19 +1,11 @@
 package io.kuleshov.IoC;
 import java.io.FileInputStream;
 import java.io.IOException;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-
-import org.w3c.dom.Document;
-import org.xml.sax.SAXException;
-
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
 public class Module {
@@ -29,9 +21,13 @@ public class Module {
     }
 
     public Module(InputStream is) throws IOException, ParserConfigurationException, SAXException {
-        Document document = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(is);
+        this(DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(is));
+    }
+
+    public Module(Node configNode) {
         Configuration configuration = new Configuration();
-        // working with document to get configuration
+        // working with configNode to get configuration
+
         init(configuration);
     }
 
