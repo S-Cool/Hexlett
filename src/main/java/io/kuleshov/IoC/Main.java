@@ -1,4 +1,4 @@
-package io.kuleshov.IoC;
+package io.kuleshov.ioc;
 
 import java.io.IOException;
 import javax.xml.parsers.DocumentBuilderFactory;
