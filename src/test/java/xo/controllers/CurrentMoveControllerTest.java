@@ -1,13 +1,14 @@
-package io.hexlett.java.m101.xo.controllers;
+package xo.controllers;
 
+import io.hexlett.java.m101.xo.controllers.CurrentMoveController;
 import io.hexlett.java.m101.xo.model.Field;
 import io.hexlett.java.m101.xo.model.Figure;
 import org.junit.Test;
 
 import java.awt.*;
 
-import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class CurrentMoveControllerTest {
 

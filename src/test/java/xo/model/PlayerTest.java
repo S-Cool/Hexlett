@@ -1,8 +1,10 @@
-package io.hexlett.java.m101.xo.model;
+package xo.model;
 
+import io.hexlett.java.m101.xo.model.Figure;
+import io.hexlett.java.m101.xo.model.Player;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class PlayerTest {
 

@@ -1,6 +1,8 @@
-package io.hexlett.java.m101.xo.model;
+package xo.model;
 
 import io.hexlett.java.m101.xo.exceptions.InvalidPointException;
+import io.hexlett.java.m101.xo.model.Field;
+import io.hexlett.java.m101.xo.model.Figure;
 import org.junit.Test;
 
 import java.awt.*;
