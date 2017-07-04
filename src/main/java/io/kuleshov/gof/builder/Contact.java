@@ -1,4 +1,4 @@
-package io.kuleshov.builder;
+package io.kuleshov.gof.builder;
 
 public class Contact {
     private final String name;
