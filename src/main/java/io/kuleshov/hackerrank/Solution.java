@@ -2,25 +2,24 @@ package io.kuleshov.hackerrank;
 
 import java.util.*;
 
-public class Solution {
-
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        String s = scan.nextLine();
-        scan.close();
-
-        s = s.trim();
-
-        if (s.length() > 400000) {
-            System.out.print("");
-        } else if (s.length() == 0) {
-            System.out.print(0);
-        } else {
-            String arr[] = s.split("[ !,?._'@]+");
-            System.out.println(arr.length);
-            for (int i = 0; i < arr.length; i++) {
-                System.out.println(arr[i]);
-            }
+class Solution{
+    public static void main(String []args){
+        MyCalculator my_calculator = new MyCalculator();
+        System.out.print("I implemented: ");
+        ImplementedInterfaceNames(my_calculator);
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.print(my_calculator.divisor_sum(n) + "\n");
+        sc.close();
+    }
+    /*
+     *  ImplementedInterfaceNames method takes an object and prints the name of the interfaces it implemented
+     */
+    static void ImplementedInterfaceNames(Object o){
+        Class[] theInterfaces = o.getClass().getInterfaces();
+        for (int i = 0; i < theInterfaces.length; i++){
+            String interfaceName = theInterfaces[i].getName();
+            System.out.println(interfaceName);
         }
     }
 }
