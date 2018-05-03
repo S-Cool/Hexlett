@@ -1,25 +1,21 @@
 package io.kuleshov.hackerrank;
 
-import java.util.*;
+import java.util.Scanner;
+import java.util.regex.*;
 
-class Solution{
-    public static void main(String []args){
-        MyCalculator my_calculator = new MyCalculator();
-        System.out.print("I implemented: ");
-        ImplementedInterfaceNames(my_calculator);
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        System.out.print(my_calculator.divisor_sum(n) + "\n");
-        sc.close();
-    }
-    /*
-     *  ImplementedInterfaceNames method takes an object and prints the name of the interfaces it implemented
-     */
-    static void ImplementedInterfaceNames(Object o){
-        Class[] theInterfaces = o.getClass().getInterfaces();
-        for (int i = 0; i < theInterfaces.length; i++){
-            String interfaceName = theInterfaces[i].getName();
-            System.out.println(interfaceName);
+public class Solution {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int testCases = Integer.parseInt(in.nextLine());
+        while (testCases > 0) {
+            String pattern = in.nextLine();
+            try {
+                Pattern.compile(pattern);
+                System.out.println("Valid");
+            } catch (PatternSyntaxException e) {
+                System.out.println("Invalid");
+            }
+            testCases--;
         }
     }
 }
