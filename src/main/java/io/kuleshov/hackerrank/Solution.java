@@ -1,41 +1,21 @@
 package io.kuleshov.hackerrank;
 
-import java.util.*;
-
 public class Solution {
 
-    static void miniMaxSum(int[] arr) {
+    static int[] reverseArray(int[] array) {
 
-        long sum = 0;
-        long min = 1000000000;
-        long max = 0;
-
-        for (int i = 0; i < 5; i++) {
-
-            sum = sum + arr[i];
-            if (min > arr[i]) {
-                min = arr[i];
-            }
-            if (max < arr[i]) {
-                max = arr[i];
-            }
+        for (int i = 0; i < array.length / 2; i++) {
+            int temp = array[i];
+            array[i] = array[array.length - 1 - i];
+            array[array.length - 1 - i] = temp;
         }
-        System.out.println((sum - max) + " " + (sum - min));
+        return array;
     }
 
-
-    private static final Scanner scan = new Scanner(System.in);
-
     public static void main(String[] args) {
-        int[] arr = new int[5];
-
-        String[] arrItems = scan.nextLine().split(" ");
-
-        for (int arrItr = 0; arrItr < 5; arrItr++) {
-            int arrItem = Integer.parseInt(arrItems[arrItr].trim());
-            arr[arrItr] = arrItem;
-        }
-
-        miniMaxSum(arr);
+        int[] array = {1, 4, 3, 2};
+        int[] myArray = reverseArray(array);
+        for (int v : myArray)
+            System.out.println(v);
     }
 }
