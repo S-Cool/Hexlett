@@ -1,21 +1,29 @@
 package io.kuleshov.hackerrank;
 
-public class Solution {
+public enum Solution {
+    MERCEDES(10), TOYOTA(7), VOLVO;
+    private int freeCabs; // поле класса перечисления
 
-    static int[] reverseArray(int[] array) {
-
-        for (int i = 0; i < array.length / 2; i++) {
-            int temp = array[i];
-            array[i] = array[array.length - 1 - i];
-            array[array.length - 1 - i] = temp;
-        }
-        return array;
+    Solution() { // конструктор класса перечисления
     }
 
-    public static void main(String[] args) {
-        int[] array = {1, 4, 3, 2};
-        int[] myArray = reverseArray(array);
-        for (int v : myArray)
-            System.out.println(v);
+    Solution(int cabs) { // конструктор класса перечисления
+        freeCabs = cabs;
+    }
+
+    public int getFreeCabs() {
+        return freeCabs;
+    }
+
+    public void setFreeCabs(int cabs) {
+        freeCabs = cabs;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s : free cabs = %d", name(), freeCabs);
     }
 }
+
+
+
